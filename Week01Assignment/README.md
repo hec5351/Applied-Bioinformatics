@@ -43,7 +43,7 @@ ouput: I first made a new directory, changed into that directory, and then creat
 
 
 Input:
-```
+```bash
 cd ../ 
 mkdir directory2
 cd directory2
