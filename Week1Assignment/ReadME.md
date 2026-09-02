@@ -9,10 +9,9 @@ Version: 1.24
 ## Question 7
 #### Q: Show commands needed to create a nested directory structure.
 '''
+
 mkdir directory
-'''
 cd directory
-'''
 mkdir nesteddirectory
 '''
 ## Question 8
