@@ -8,12 +8,11 @@ AI Ready Code Editor: Visual Studio Code
 Version: 1.24
 ## Question 7
 #### Q: Show commands needed to create a nested directory structure.
-'''
-
+```bash
 mkdir directory
 cd directory
 mkdir nesteddirectory
-'''
+```
 ## Question 8
 #### Q: Show commands that create files in different directories
 A:   1. mkdir directory 
