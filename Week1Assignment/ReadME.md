@@ -1,3 +1,5 @@
+# Question 2
+## Install an AI ready code editor as described on the page. Mention in your README the editor you chose.
 AI Ready Code Editor: Visual Studio Code
 Q: What version is your samtools command in the bioinfo environment?
 A: Version: 1.24
