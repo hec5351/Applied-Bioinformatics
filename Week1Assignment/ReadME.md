@@ -8,12 +8,17 @@ AI Ready Code Editor: Visual Studio Code
 Version: 1.24
 ## Question 7
 #### Q: Show commands needed to create a nested directory structure.
-A nested directory is a directory located inside a directory. \
-Input: \
+A nested directory is a directory located inside a directory.   
+
+
+Input:  
 ```bash
 mkdir directory
 ```
-Output: Created a new directory called directory.
+Output: Created a new directory called directory.  
+
+
+Input:  
 ```bash
 cd directory
 ```
