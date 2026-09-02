@@ -1,13 +1,22 @@
-# Question 2
-## Install an AI ready code editor as described on the page. Mention in your README the editor you chose.
+# Week 01 Assignment
+## Question 2
+#### Install an AI ready code editor as described on the page. Mention in your README the editor you chose.
 AI Ready Code Editor: Visual Studio Code
-Q: What version is your samtools command in the bioinfo environment?
-A: Version: 1.24
-Q: Show commands needed to create a nested directory structure.
-A:  1. mkdir directory
-    2. cd directory
-    3. mkdir nesteddirectory
-Q: Show commands that create files in different directories
+
+## Question 6
+#### Q: What version is your samtools command in the bioinfo environment?
+Version: 1.24
+## Question 7
+#### Q: Show commands needed to create a nested directory structure.
+'''
+mkdir directory
+'''
+cd directory
+'''
+mkdir nesteddirectory
+'''
+## Question 8
+#### Q: Show commands that create files in different directories
 A:   1. mkdir directory 
      2. cd directory 
      3. >createfile 
