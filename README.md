@@ -3,3 +3,4 @@
 ##### I will be using this repository for my BMMB852 (Applied Bioinformatics) class during the Fall of 2026.
 ## Weekly Assignments
 ##### [Week 01](https://github.com/hec5351/Applied-Bioinformatics/tree/main/Week01Assignment)
+#### [Week 02](https://github.com/hec5351/Applied-Bioinformatics/tree/main/Week02Assignment)
