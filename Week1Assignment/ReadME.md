@@ -15,15 +15,24 @@ mkdir nesteddirectory
 ```
 ## Question 8
 #### Q: Show commands that create files in different directories
-A:   1. mkdir directory 
-     2. cd directory 
-     3. >createfile 
-     4. cd ../ 
-     5. mkdir directory2
-     6. cd directory2
-     7. >createfile2
-Q: Show how to access these files using relative and absolute paths.
-A:   relative: cd directory 
-               open . file
-     absolute: cd /Users/haleyecurtis/directory/ 
-               open . file
+```bash
+ mkdir directory 
+cd directory 
+>createfile 
+cd ../ 
+mkdir directory2
+cd directory2
+>createfile2
+```
+## Question 9
+#### Q: Show how to access these files using relative and absolute paths.
+relative: 
+```bash
+cd directory
+open . file
+```
+absolute:
+```bash
+cd /Users/haleyecurtis/directory/ 
+open . file
+```
