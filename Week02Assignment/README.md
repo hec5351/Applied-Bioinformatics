@@ -35,7 +35,8 @@ pixi run make
 ```
 ## Question 2
 #### How large is the genome? How many chromosomes does it have?
-ddd
+You can learn the answer to both of these questions using the function ```bash seqtk ```
+
 ## Question 3
 #### How many annotations are in the annotation file?
 dddd
