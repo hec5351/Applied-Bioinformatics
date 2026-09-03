@@ -1,6 +1,37 @@
 # Step 1: Obtain Genomic Data
 ## Question 1
 #### describe the genome selected and how the Makefile should be used.
+The genome I selected is _Apis florea_ (little honeybee). ACC: 048593485.1. The Makefile is used to download the .fasta file from the NCBI Genome Database using the accession number.
+
+
+#### Process for Makefile:
+```bash
+mkdir Week02/
+nano Makefile
+```
+
+#### Makeifle contents:
+```bash
+ACC = GCF_048593485.1
+
+all: $(ACC).fasta
+
+$(ACC).fasta:
+	datasets download genome accession $(ACC) --include genome --filename $(ACC).zip
+	unzip -o $(ACC).zip -d $(ACC)_tmp
+	cp $(ACC)_tmp/ncbi_dataset/data/$(ACC)/*.fna $(ACC).fasta
+	rm -rf $(ACC).zip $(ACC)_tmp
+
+clean:
+	rm -f $(ACC).fasta
+```
+
+
+#### Process to download .fasta from NCBI using pixi:
+```bash
+cd Week02/
+pixi run make
+```
 ## Question 2
 #### How large is the genome? How many chromosomes does it have?
 ddd
