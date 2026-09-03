@@ -33,16 +33,26 @@ clean:
 cd Week02/
 pixi run make
 ```
+
+
 ## Question 2
 #### How large is the genome? How many chromosomes does it have?
-You can learn the answer to both of these questions using the function ```bash seqtk ```
+According to NCBI, the genome size is 221.6 Mb, and it has 16 chromosomes. 
+
 
 ## Question 3
 #### How many annotations are in the annotation file?
-dddd
+The annotation file is the .gff file. There are 13316 annotations.
+input:
+```bash
+awk '$3=="gene"' ./GCF_048593485.1_annotated/ncbi_dataset/data/GCF_048593485.1/genomic.gff | wc -l
+```
+
 #### How complete is this genomic build in your opinion?
+This genome is at the contig level of assembly, so it is fairly incomplete in my opinion.
+
+
 ## Question 4
-#### Add the instructions for running the Makefile
 
 # Step 2: Visualize a Genome
 ## Question 1
