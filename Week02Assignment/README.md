@@ -7,10 +7,11 @@ The genome I selected is _Apis florea_ (little honeybee). ACC: 048593485.1. The 
 #### Process for Makefile:
 ```bash
 mkdir Week02/
+cd Week02
 nano Makefile
 ```
 
-#### Makeifle contents:
+#### Makefile contents:
 ```bash
 ACC = GCF_048593485.1
 
