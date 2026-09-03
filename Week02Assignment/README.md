@@ -61,6 +61,8 @@ The gene is not tightly packed in the genome. I estimate the gene-to-gene distan
 
 ## Question 2
 #### Pick a coordinate on the chromosome and visually inspect the sequence regions around it.
+<img width="1068" height="221" alt="Screenshot 2026-09-03 at 7 27 25 PM" src="https://github.com/user-attachments/assets/ee6645e5-40bf-4290-aee4-8cce6e548a0c" />
+
 ## Question 3
 #### Describe all six reading frames (codons) that the coordinate could be part of.
 ## Question 4
