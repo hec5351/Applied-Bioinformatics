@@ -56,6 +56,9 @@ This genome is at the contig level of assembly, so it is fairly incomplete in my
 # Step 2: Visualize a Genome
 ## Question 1
 #### How tightly packed are the genes in this genome? Estimate the gene-to-gene distance via the browser.
+The gene is not tightly packed in the genome. I estimate the gene-to-gene distance to be about 18,000 bp.
+
+
 ## Question 2
 #### Pick a coordinate on the chromosome and visually inspect the sequence regions around it.
 ## Question 3
