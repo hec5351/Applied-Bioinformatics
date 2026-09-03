@@ -65,6 +65,13 @@ The gene is not tightly packed in the genome. I estimate the gene-to-gene distan
 
 ## Question 3
 #### Describe all six reading frames (codons) that the coordinate could be part of.
+IGV has a three-frame translation track. You know this because there are three lines of amino acids under the sequence. Therefore, reading it forward and backward can tell me all six reading frames.
+Forwards:
+<img width="1068" height="221" alt="Screenshot 2026-09-03 at 7 27 25 PM" src="https://github.com/user-attachments/assets/ee6645e5-40bf-4290-aee4-8cce6e548a0c" />
+Backwards:
+<img width="1197" height="330" alt="Screenshot 2026-09-03 at 7 37 31 PM" src="https://github.com/user-attachments/assets/8ba47ec6-7727-4337-aa99-d6840dd6a6d4" />
+
+
 ## Question 4
 #### Identify the type of feature displayed as a data track.
 ## Question 5
