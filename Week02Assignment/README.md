@@ -81,6 +81,8 @@ The feature displayed is a visualization of the sequence, not a gff, bam, or vcf
 #### Color features by their strand orientation.
 <img width="482" height="532" alt="Screenshot 2026-09-03 at 7 48 33 PM" src="https://github.com/user-attachments/assets/16c7dd7a-2ab5-4f79-9840-64344b17b97b" />
 <img width="858" height="494" alt="Screenshot 2026-09-03 at 7 49 37 PM" src="https://github.com/user-attachments/assets/c5f9f9a5-dced-4942-a6f8-8fafd79b7ca6" />
+
+
 The negative strand is colored red, while the positive one stays blue.
 
 
