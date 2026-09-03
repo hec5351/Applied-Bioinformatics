@@ -48,11 +48,10 @@ input:
 awk '$3=="gene"' ./GCF_048593485.1_annotated/ncbi_dataset/data/GCF_048593485.1/genomic.gff | wc -l
 ```
 
-#### How complete is this genomic build in your opinion?
-This genome is at the contig level of assembly, so it is fairly incomplete in my opinion.
-
 
 ## Question 4
+#### How complete is this genomic build in your opinion?
+This genome is at the contig level of assembly, so it is fairly incomplete in my opinion.
 
 # Step 2: Visualize a Genome
 ## Question 1
