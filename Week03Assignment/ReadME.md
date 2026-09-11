@@ -37,18 +37,34 @@ After running this script, the Makefile looked clean. There were no .sh files or
 
 ## Question 3 
 #### Evaluate the README.md of the assignment.
-
+This ReadME does not include a description of what the ReadME is about or how the Makefile should be used. There is also no specific code to run in the ReadME file. Also, there are no directions for creating the Makefile.
 
 ## Question 4 
 #### Does the README.md make it clear how to run the code and what the outcomes are?
-
+The ReadME makes the expected outcomes clear, but how to run the code is less clear.
 
 ## Question 5 
 #### Verify that the results are reproducible. Does the code do what the author says it does?
+At first, it was throwing me an error that said:
+```
+make: Nothing to be done for `all'.
+```
 
 
-## 
-#### Question 6 Ask the AI Agent to compare your solution to theirs.
+I asked AI what was wrong using this prompt: I have a Makefile and want to run it using pixi. "make" and "pixi run make" both throw the error:make: Nothing to be done for `all'. I am in the directory with the Makefile. AI told me that I need to delete the previously created sequences folder, as make thinks that it has nothing to do since the .fasta and .gff were already downloaded in the directory. I deleted the sequences folder using the following code:
+```
+rm -rf sequences
+```
+
+
+Then, I was able to download the .fasta and .gff using:
+```
+make
+```
+
+
+## Question 6
+#### Ask the AI Agent to compare your solution to theirs.
 
 
 ## Question 7 
