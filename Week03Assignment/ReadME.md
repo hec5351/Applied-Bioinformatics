@@ -126,7 +126,10 @@ Prompt I used: Evaluate which solution is better.
 
 
 
-AI Response:
+AI Response:   
+
+
+
 <img width="778" height="748" alt="Screenshot 2026-09-11 at 4 11 24 PM" src="https://github.com/user-attachments/assets/23c4afb7-ca2c-45ad-a140-3d1358e724f1" />
 
 
