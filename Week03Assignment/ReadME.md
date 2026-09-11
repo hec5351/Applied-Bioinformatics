@@ -13,7 +13,27 @@ Now, you will have a fork of the directory. If you hover your mouse over the for
 
 ## Question 2 
 #### Verify that the code is not doing something dangerous.
+prompt: How would i verify that the code in the directory I forked is not doing something dangerous?
 
+
+AI respoonse:
+"For most bioinformatics repos (Makefiles, shell scripts, Python), this is usually enough:
+```
+cat Makefile
+cat *.sh
+cat *.py
+```
+Look specifically for:
+
+curl ... | bash or wget ... | sh — piping a download straight into a shell interpreter, no inspection first. This is the single riskiest pattern to watch for.
+sudo — anything requesting elevated permissions
+rm -rf with variables that could expand unexpectedly (rm -rf $SOMEVAR/ where $SOMEVAR is empty deletes from /)
+Network calls to unfamiliar domains
+eval, exec, or base64-decoded strings being executed
+Environment variable exfiltration (e.g., scripts that read .env, SSH keys, AWS credentials and send them somewhere)."
+
+
+After running this script, the Makefile looked clean. There were no .sh files or .py files.
 
 ## Question 3 
 #### Evaluate the README.md of the assignment.
