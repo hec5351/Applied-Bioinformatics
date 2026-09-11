@@ -8,7 +8,7 @@ First, fork the directory. The directory I chose was https://github.com/asusanya
 
 
 
-Now, you will have a fork of the directory. If you hover your mouse over the fork option again, you should see:<img width="1298" height="634" alt="Screenshot 2026-09-11 at 3 21 11 PM" src="https://github.com/user-attachments/assets/5384333f-1a1a-463e-b680-80aaab8bb211" />
+Now, you will have a fork of the directory. If you hover your mouse over the fork option again, you should see:<img width="500" height="300" alt="Screenshot 2026-09-11 at 3 21 11 PM" src="https://github.com/user-attachments/assets/5384333f-1a1a-463e-b680-80aaab8bb211" />
 
 
 ## Question 2 
