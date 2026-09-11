@@ -37,7 +37,7 @@ After running this script, the Makefile looked clean. There were no .sh files or
 
 ## Question 3 
 #### Evaluate the README.md of the assignment.
-This ReadME does not include a description of what the ReadME is about or how the Makefile should be used. There is also no specific code to run in the ReadME file. Also, there are no directions for creating the Makefile.
+This ReadME does not include a description of what the ReadME is about or how the Makefile should be used. There is also no specific code to run in the ReadME file. Also, there are no directions for creating the Makefile or its contents.
 
 ## Question 4 
 #### Does the README.md make it clear how to run the code and what the outcomes are?
@@ -65,10 +65,70 @@ make
 
 ## Question 6
 #### Ask the AI Agent to compare your solution to theirs.
+The contents of my peer's Makefile:
+```
+ACCESSION := NC_007558.1
+NCBI_URL := https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi
+SEQUENCES_DIR := sequences
+FASTA := $(SEQUENCES_DIR)/$(ACCESSION).fasta
+GFF := $(SEQUENCES_DIR)/$(ACCESSION).gff
+
+.PHONY: all download clean
+
+all: download
+
+download: $(FASTA) $(GFF)
+
+
+$(FASTA):
+	mkdir -p $(SEQUENCES_DIR)
+	curl -fL "$(NCBI_URL)?db=nuccore&id=$(ACCESSION)&rettype=fasta&retmode=text" -o $@
+
+$(GFF):
+	mkdir -p $(SEQUENCES_DIR)<img width="746" height="412" alt="Screenshot 2026-09-11 at 4 09 02 PM" src="https://github.com/user-attachments/assets/46ba0174-0a94-4b33-9fd4-ce7f271d1c38" />
+
+	curl -fL "$(NCBI_URL)?db=nuccore&id=$(ACCESSION)&rettype=gff3&retmode=text" -o $@
+
+clean:
+	rm -f $(FASTA) $(GFF)
+```
+
+
+
+The contents of my Makefile:
+```
+ACC = GCF_048593485.1
+
+all: $(ACC).fasta
+
+$(ACC).fasta:
+	datasets download genome accession $(ACC) --include genome --filename $(ACC).zip
+	unzip -o $(ACC).zip -d $(ACC)_tmp
+	cp $(ACC)_tmp/ncbi_dataset/data/$(ACC)/*.fna $(ACC).fasta
+	rm -rf $(ACC).zip $(ACC)_tmp
+
+clean:
+	rm -f $(ACC).fasta
+```
+
+The prompt I gave AI: My class assignment is to create a Makefile and download a genome .fasta and .gff file from NCBI. Compare my solution to my peer's solution. *I then pasted my solution and my peer's solution.*   
+
+
+
+AI response: <img width="500" height="300" alt="Screenshot 2026-09-11 at 4 09 30 PM" src="https://github.com/user-attachments/assets/749e4169-3e7b-42c5-904f-df098ed04101" />
+
+
 
 
 ## Question 7 
-#### Ask the AI Agent to evaluate which solution it thinks is better.
+#### Ask the AI Agent to evaluate which solution it thinks is better. 
+Prompt I used: Evaluate which solution is better.   
+
+
+
+AI Response:
+<img width="778" height="748" alt="Screenshot 2026-09-11 at 4 11 24 PM" src="https://github.com/user-attachments/assets/23c4afb7-ca2c-45ad-a140-3d1358e724f1" />
+
 
 
 ## Question 8
