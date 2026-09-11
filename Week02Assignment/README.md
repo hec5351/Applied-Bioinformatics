@@ -31,7 +31,8 @@ clean:
 #### Process to download .fasta from NCBI using pixi:
 ```bash
 cd Week02/
-pixi run make
+make fasta
+make gff
 ```
 
 
