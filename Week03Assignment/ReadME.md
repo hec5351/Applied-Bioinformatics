@@ -140,7 +140,7 @@ AI Response:
 
 ## Question 9
 #### Make a change to the forked repository that addresses an issue you found.
-I chose to change the tool my peer used for downloading the .fasta and .gg from efetch to download, since datasets is specific to genomic data:
+I chose to change the tool my peer used for downloading the .fasta and .gff from efetch to download, since datasets is specific to genomic data:
 ```
 ACCESSION := NC_007558.1
 NCBI_URL := https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi
