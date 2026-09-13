@@ -4,3 +4,4 @@
 ## Weekly Assignments
 #### [Week 01](https://github.com/hec5351/Applied-Bioinformatics/tree/main/Week01Assignment)
 #### [Week 02](https://github.com/hec5351/Applied-Bioinformatics/tree/main/Week02Assignment)
+#### [Week 03] (https://github.com/hec5351/Applied-Bioinformatics/tree/main/Week03Assignment) 
