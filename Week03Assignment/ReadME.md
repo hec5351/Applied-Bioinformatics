@@ -136,7 +136,7 @@ AI Response:
 
 ## Question 8
 #### In a paragraph or two, summarize your findings above.
-
+While completing this assignment, I learned how to clone and fork another person's github repository. I also learned how to edit their code and push it back to github. This will be useful to me in my research, as I now know that I can access the code from relevant literature to assist in my own analyses. Through using AI, I was also able to identify and fix errors in my own code. 
 
 ## Question 9
 #### Make a change to the forked repository that addresses an issue you found.
