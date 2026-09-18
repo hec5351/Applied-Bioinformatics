@@ -27,11 +27,43 @@ I find it interesting that the _Apis florea_ genome is not very well studied, as
 
 
 ## Download FASTQ files for an experiment
-### The Makefile should download the first N reads from an SRR accession.
-### Place the files in directories named after the data type.
+### The Makefile should download the first N reads from an SRR accession. Place the files in directories named after the data type.
+
+SRR: SRR098291  
+
+
+N = 100000  
+
+
+```bash
+mkdir -p fastq
+fastq-dump -X $(N) --split-files --outdir fastq $(SRR)
+```  
+
 ### Run a QC visualization on the downloaded reads to generate a report.
-### Apply a QC method to the reads to see whether it makes a visual difference.
+```bash
+mkdir -p fastqc_raw
+fastqc fastq/$(SRR)_1.fastq fastq/$(SRR)_2.fastq -o fastqc_raw
+multiqc fastqc_raw -o fastqc_raw
+```  
+
+
+### Apply a QC method to the reads to see whether it makes a visual difference (trim reads with fastp).  
+
+
+```bash
+mkdir -p trimmed_fastq
+fastp \
+-i fastq/$(SRR)_1.fastq -I fastq/$(SRR)_2.fastq \
+-o trimmed_fastq/$(SRR)_1.trimmed.fastq -O trimmed_fastq/$(SRR)_2.trimmed.fastq
+```
+
 ### Run a QC visualization on the trimmed reads to generate a report.
+```
+	mkdir -p fastqc_trimmed
+	fastqc trimmed_fastq/$(SRR)_1.trimmed.fastq trimmed_fastq/$(SRR)_2.trimmed.fastq -o fastqc_trimmed
+	multiqc fastqc_trimmed -o fastqc_trimmed
+```
 ### Discuss whether the QC step made a difference.
 ### Rename the FASTQ files from SRR numbers to more descriptive names that are easier to read.
 ### The metadata fields usually carry information about the sample name.
