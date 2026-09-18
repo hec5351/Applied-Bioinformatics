@@ -64,8 +64,6 @@ multiqc fastqc_trimmed -o fastqc_trimmed
 ```
 ### Discuss whether the QC step made a difference.
 
-The qc steps definitely made a difference. particularly, the dups, 
-### Rename the FASTQ files from SRR numbers to more descriptive names that are easier to read.
-### The metadata fields usually carry information about the sample name.
+The qc steps definitely made a difference on quality-related metrics. Particularly, the qc steps improved the per-base sequence quality, GC content, and per-base N content. Therefore, trimming the data improved the quality. However, the per-base sequence content was not improved after trimming.
 
 
