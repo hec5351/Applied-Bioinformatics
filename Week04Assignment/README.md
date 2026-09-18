@@ -29,13 +29,13 @@ I find it interesting that the _Apis florea_ genome is not very well studied, as
 ## Download FASTQ files for an experiment
 ### The Makefile should download the first N reads from an SRR accession. Place the files in directories named after the data type.
 
-SRR: SRR098291  
-
-
+SRR: SRR098291
 N = 100000  
 
 
 ```bash
+SRR: SRR098291
+N = 100000
 mkdir -p fastq
 fastq-dump -X $(N) --split-files --outdir fastq $(SRR)
 ```  
