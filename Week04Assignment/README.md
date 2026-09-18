@@ -32,16 +32,19 @@ I find it interesting that the _Apis florea_ genome is not very well studied, as
 
 
 ```bash
-SRR: SRR098291
+#Run everything with "pixie run make all"
+SRR = SRR098291
+SAMPLE_NAME = Apis_florea
 N = 100000
 mkdir -p fastq
 fastq-dump -X $(N) --split-files --outdir fastq $(SRR)
+mv fastq/$(SRR)_2.fastq fastq/$(SAMPLE_NAME).fastq
 ```  
 
 ### Run a QC visualization on the downloaded reads to generate a report.
 ```bash
 mkdir -p fastqc_raw
-fastqc fastq/$(SRR)_2.fastq -o fastqc_raw
+fastqc fastq/$(SAMPLE_NAME).fastq -o fastqc_raw
 multiqc fastqc_raw -o fastqc_raw
 ```  
 
@@ -52,14 +55,14 @@ multiqc fastqc_raw -o fastqc_raw
 ```bash
 mkdir -p trimmed_fastq
 fastp \
--i fastq/$(SRR)_2.fastq \
--o trimmed_fastq/$(SRR).trimmed.fastq
+-i fastq/$(SAMPLE_NAME).fastq \
+-o trimmed_fastq/$(SAMPLE_NAME).trimmed.fastq
 ```
 
 ### Run a QC visualization on the trimmed reads to generate a report.
-```
+```bash
 mkdir -p fastqc_trimmed
-fastqc trimmed_fastq/$(SRR).trimmed.fastq -o fastqc_trimmed
+fastqc trimmed_fastq/$(SAMPLE_NAME).trimmed.fastq -o fastqc_trimmed
 multiqc fastqc_trimmed -o fastqc_trimmed
 ```
 ### Discuss whether the QC step made a difference.
