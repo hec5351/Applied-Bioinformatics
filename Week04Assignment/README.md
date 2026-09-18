@@ -28,7 +28,7 @@ I find it interesting that the _Apis florea_ genome is not very well studied, as
 
 ## Download FASTQ files for an experiment
 ### The Makefile should download the first N reads from an SRR accession. Place the files in directories named after the data type.
-# A note on my genome: This run has two files: _1 is a 4bp technical/barcode read (not usable data), _2 is the real biological read. I only use _2 for each step (except the download step), so anyone else running this would have to add _1 to each step (assuming they had 2 usable data files).
+##### A note on my genome: This run has two files: _1 is a 4bp technical/barcode read (not usable data), _2 is the real biological read. I only use _2 for each step (except the download step), so anyone else running this would have to add _1 to each step (assuming they had 2 usable data files).
 
 
 ```bash
