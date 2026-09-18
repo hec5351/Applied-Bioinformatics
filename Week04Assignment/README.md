@@ -28,9 +28,7 @@ I find it interesting that the _Apis florea_ genome is not very well studied, as
 
 ## Download FASTQ files for an experiment
 ### The Makefile should download the first N reads from an SRR accession. Place the files in directories named after the data type.
-
-SRR: SRR098291
-N = 100000  
+# A note on my genome: This run has two files: _1 is a 4bp technical/barcode read (not usable data), _2 is the real biological read. I only use _2 for each step (except the download step), so anyone else running this would have to add _1 to each step (assuming they had 2 usable data files).
 
 
 ```bash
@@ -43,7 +41,7 @@ fastq-dump -X $(N) --split-files --outdir fastq $(SRR)
 ### Run a QC visualization on the downloaded reads to generate a report.
 ```bash
 mkdir -p fastqc_raw
-fastqc fastq/$(SRR)_1.fastq fastq/$(SRR)_2.fastq -o fastqc_raw
+fastqc fastq/$(SRR)_2.fastq -o fastqc_raw
 multiqc fastqc_raw -o fastqc_raw
 ```  
 
@@ -54,17 +52,19 @@ multiqc fastqc_raw -o fastqc_raw
 ```bash
 mkdir -p trimmed_fastq
 fastp \
--i fastq/$(SRR)_1.fastq -I fastq/$(SRR)_2.fastq \
--o trimmed_fastq/$(SRR)_1.trimmed.fastq -O trimmed_fastq/$(SRR)_2.trimmed.fastq
+-i fastq/$(SRR)_2.fastq \
+-o trimmed_fastq/$(SRR).trimmed.fastq
 ```
 
 ### Run a QC visualization on the trimmed reads to generate a report.
 ```
-	mkdir -p fastqc_trimmed
-	fastqc trimmed_fastq/$(SRR)_1.trimmed.fastq trimmed_fastq/$(SRR)_2.trimmed.fastq -o fastqc_trimmed
-	multiqc fastqc_trimmed -o fastqc_trimmed
+mkdir -p fastqc_trimmed
+fastqc trimmed_fastq/$(SRR).trimmed.fastq -o fastqc_trimmed
+multiqc fastqc_trimmed -o fastqc_trimmed
 ```
 ### Discuss whether the QC step made a difference.
+
+The qc steps definitely made a difference. particularly, the dups, 
 ### Rename the FASTQ files from SRR numbers to more descriptive names that are easier to read.
 ### The metadata fields usually carry information about the sample name.
 
