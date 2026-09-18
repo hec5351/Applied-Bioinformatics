@@ -5,9 +5,24 @@
 The genome I chose in the previous assignment was _Apis florea_ (the little honey bee). On SRA, there are 70 results for this genome. 67 of them are from Illumina, 2 of them are from LS454, and 1 of them is from Oxford Nanopore. On ENA, there are 3 results for assembled genomes. There are 15 studies and 19 projects related to the _Apis florea_ genome. To compare the availability of the _Apis florea_ genome, I searched for _Apis mellifera_ (the European honey bee), which is a closely related organism used worldwide for honey production. On SRA, there are 14,374 results for the _Apis mellifera_ genome. On ENA, there are 889 assembled genomes, 36,153 experiments, and 27,622 runs for _Apis mellifera_. Therefore, _Apis florea_ is not well documented in the literature compared to other members of its genus. 
 
 ## Assess the experimental evidence for the genome
-### Question 1: How "popular" is this genome? How many datasets are available?
-### Question 2: What is the breakdown by sequencing strategy and platform (or some other attribute)?
+### Question 1: How "popular" is this genome? How many datasets are available?  
+
+
+This genome is not very "popular." On SRA, there are 162 BioSample and 13 BioProject databases.   
+
+
+
+### Question 2: What is the breakdown by sequencing strategy and platform (or some other attribute)?  
+
+
+On SRA, there are 70 results for this genome. 67 of them are from Illumina, 2 of them are from LS454, and 1 of them is from Oxford Nanopore. On ENA, there are 3 results for assembled genomes. There are 15 studies and 19 projects related to the _Apis florea_ genome.  
+
+
+
 ### Question 3: What do you find interesting or surprising?  
+
+
+I find it interesting that the _Apis florea_ genome is not very well studied, as _Apis mellifera_, one of its closest relatives, is one of the most studied insects.
 
 
 
