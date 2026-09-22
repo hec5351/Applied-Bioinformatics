@@ -1,12 +1,32 @@
 ACC = GCF_048593485.1
+ASM = $(ACC)_ASM4859348v1
+BASE = https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/048/593/485/$(ASM)
+CURL = curl -L --fail --retry 5 --retry-delay 3 --connect-timeout 20 --speed-limit 1024 --speed-time 30
 
-all: $(ACC).fasta
+FASTA = $(ACC).fasta
+FASTA_GZ = $(ACC).fna.gz
+GFF_RAW = $(ACC).raw.gff.gz
+GFF = $(ACC).gff.gz
 
-$(ACC).fasta:
-	datasets download genome accession $(ACC) --include genome --filename $(ACC).zip
-	unzip -o $(ACC).zip -d $(ACC)_tmp
-	cp $(ACC)_tmp/ncbi_dataset/data/$(ACC)/*.fna $(ACC).fasta
-	rm -rf $(ACC).zip $(ACC)_tmp
+all: $(FASTA).fai $(GFF).tbi
+
+$(FASTA_GZ):
+	$(CURL) $(BASE)/$(ASM)_genomic.fna.gz -o $@
+
+$(GFF_RAW):
+	$(CURL) $(BASE)/$(ASM)_genomic.gff.gz -o $@
+
+$(FASTA): $(FASTA_GZ)
+	gunzip -c $< > $@
+
+$(GFF): $(GFF_RAW)
+	(gunzip -c $< | awk '/^#/ { print }'; gunzip -c $< | awk '/^[^#]/ { print }' | sort -t '	' -k1,1 -k4,4n -k5,5n) | bgzip > $@
+
+$(FASTA).fai: $(FASTA)
+	samtools faidx $(FASTA)
+
+$(GFF).tbi: $(GFF)
+	tabix -p gff $(GFF)
 
 clean:
-	rm -f $(ACC).fasta
+	rm -f $(ACC).zip $(FASTA_GZ) $(GFF_RAW) $(FASTA) $(FASTA).fai $(GFF) $(GFF).tbi

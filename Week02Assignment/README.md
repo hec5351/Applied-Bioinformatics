@@ -1,7 +1,7 @@
 # Step 1: Obtain Genomic Data
 ## Question 1
 #### describe the genome selected and how the Makefile should be used.
-The genome I selected is _Apis florea_ (little honeybee). ACC: 048593485.1. The Makefile is used to download the .fasta file from the NCBI Genome Database using the accession number.
+The genome I selected is _Apis florea_ (little honeybee). ACC: GCF_048593485.1. The Makefile is used to download the FASTA and GFF files from NCBI, then create index files for IGV.
 
 
 #### Process for Makefile:
@@ -14,27 +14,47 @@ nano Makefile
 #### Makefile contents:
 ```bash
 ACC = GCF_048593485.1
+ASM = $(ACC)_ASM4859348v1
+BASE = https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/048/593/485/$(ASM)
+CURL = curl -L --fail --retry 5 --retry-delay 3 --connect-timeout 20 --speed-limit 1024 --speed-time 30
 
-all: $(ACC).fasta $(ACC).gff
+FASTA = $(ACC).fasta
+FASTA_GZ = $(ACC).fna.gz
+GFF_RAW = $(ACC).raw.gff.gz
+GFF = $(ACC).gff.gz
 
-$(ACC).fasta $(ACC).gff:
-	datasets download genome accession $(ACC) --include genome,gff3 --filename $(ACC).zip
-	unzip -o $(ACC).zip -d $(ACC)_tmp
-	cp $(ACC)_tmp/ncbi_dataset/data/$(ACC)/*.fna $(ACC).fasta
-	cp $(ACC)_tmp/ncbi_dataset/data/$(ACC)/*.gff $(ACC).gff
-	rm -rf $(ACC).zip $(ACC)_tmp
+all: $(FASTA).fai $(GFF).tbi
+
+$(FASTA_GZ):
+	$(CURL) $(BASE)/$(ASM)_genomic.fna.gz -o $@
+
+$(GFF_RAW):
+	$(CURL) $(BASE)/$(ASM)_genomic.gff.gz -o $@
+
+$(FASTA): $(FASTA_GZ)
+	gunzip -c $< > $@
+
+$(GFF): $(GFF_RAW)
+	(gunzip -c $< | awk '/^#/ { print }'; gunzip -c $< | awk '/^[^#]/ { print }' | sort -t '	' -k1,1 -k4,4n -k5,5n) | bgzip > $@
+
+$(FASTA).fai: $(FASTA)
+	samtools faidx $(FASTA)
+
+$(GFF).tbi: $(GFF)
+	tabix -p gff $(GFF)
 
 clean:
-	rm -f $(ACC).fasta $(ACC).gff
+	rm -f $(ACC).zip $(FASTA_GZ) $(GFF_RAW) $(FASTA) $(FASTA).fai $(GFF) $(GFF).tbi
 ```
 
 
-#### Process to download .fasta from NCBI using pixi:
+#### Process to download the FASTA and GFF files using pixi:
 ```bash
-cd Week02/
-make fasta
-make gff
+cd Week02Assignment/
+pixi run -m "$HOME/edu/bioinfo" make all
 ```
+
+This creates `GCF_048593485.1.fasta`, `GCF_048593485.1.fasta.fai`, `GCF_048593485.1.gff.gz`, and `GCF_048593485.1.gff.gz.tbi`.
 
 
 ## Question 2
@@ -76,7 +96,7 @@ Backwards:
 
 ## Question 4
 #### Identify the type of feature displayed as a data track.
-The feature displayed is a visualization of the sequence, not a gff, bam, or vcf.
+The feature displayed as a data track is the GFF annotation track.
 
 
 ## Question 5
@@ -86,5 +106,3 @@ The feature displayed is a visualization of the sequence, not a gff, bam, or vcf
 
 
 The negative strand is colored red, while the positive one stays blue.
-
-
