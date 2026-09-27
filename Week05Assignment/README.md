@@ -13,7 +13,7 @@ Mycoplasma genitalium genome size = 580,000 bp.
 Mycoplasma genitalium length = bases/read spots. This means: 10,900,00/108.852 = 100 bp (https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&page_size=10&acc=SRR39974648&display=metadata).  
 
 
-N = (10 x 2580,076) / 100 = 57,938 reads
+N = (10 x 2580,076) / 100 = 57,938 reads. I then divided this number by 2 since my run is paired-end: N = 28970.
 
 
 ## Question 2: What percent of the reads align?  
