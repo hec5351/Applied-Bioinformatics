@@ -11,17 +11,25 @@ Sample 1 is viewed as pairs and colored by insert size. Most of the sample appea
 
 Sample 2 is viewed as pairs and colored by insert size. Green, red, and blue appear throughout the sample. This suggests structural variation in the sample. It also suggests mismatches and high variance with the reference genome. 
 
+
 ## Sample 3  
 <img width="1500" height="500" alt="Screenshot 2026-10-04 at 7 58 47 PM" src="https://github.com/user-attachments/assets/5c6ec2df-ed8f-4480-96d8-4169f62ec9b5" />  
 
 
-Sample 3 is viewed as paurs and colored by pair orientation. The coverage histogram 
-
+Sample 3 is viewed as pairs and colored by pair orientation. The coverage histogram seems abnormal, with peaks from 1- 2 kb, 3- 4 kb, and 5-6 kbs. Coverage looks much lower everywhere else in the sample. Where the coverage spikes, there are long columns of green. The increased coverage in certain regions indicates there could be heavy duplication in this sample.
 
 
 ## Sample 4  
+<img width="1500" height="500" alt="Screenshot 2026-10-04 at 8 21 51 PM" src="https://github.com/user-attachments/assets/1ef14ed5-5f94-4440-ae26-2c461f602620" />
+
+
+Sample 4 is colored by insert size. Immediately, I noticed that there is abnormal coverage around 4.5-6kb. Once I zoomed in on this region, I saw that the teal reads were facing the same direction. This orientation, along with the fact that they are all condensed near the same spot, suggests the sample likely has an inversion structural variant. 
 
 
 ## Sample 5  
+<img width="1506" height="629" alt="Screenshot 2026-10-04 at 8 28 16 PM" src="https://github.com/user-attachments/assets/87dc36e7-03a9-46f5-aa0a-71fc64708fd7" />  
+
+
+Sample 5 is viewed as pairs and colored by insert size. 
 
 
