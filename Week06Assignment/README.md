@@ -28,10 +28,10 @@ Sample 4 is colored by insert size. Immediately, I noticed that there is abnorma
 
 ## Sample 5  
 ### Viewed as pairs and colored by insert size
-<img width="1506" height="629" alt="Screenshot 2026-10-04 at 8 28 16 PM" src="https://github.com/user-attachments/assets/87dc36e7-03a9-46f5-aa0a-71fc64708fd7" />  
+<img width="1500" height="500" alt="Screenshot 2026-10-04 at 8 28 16 PM" src="https://github.com/user-attachments/assets/87dc36e7-03a9-46f5-aa0a-71fc64708fd7" />  
 
 ### Viewed as pairs and colored by insert size and pair orientation
- <img width="1487" height="630" alt="Screenshot 2026-10-04 at 8 34 20 PM" src="https://github.com/user-attachments/assets/8d75b08e-3a49-4039-8a2a-83803c3ad2b9" />
+ <img width="1500" height="500" alt="Screenshot 2026-10-04 at 8 34 20 PM" src="https://github.com/user-attachments/assets/8d75b08e-3a49-4039-8a2a-83803c3ad2b9" />
 
 
 At first glance, this sample looks like it could have a deletion because of the abnormal red column between 4-6.5 kb. However, I do not think it is a deletion because there is no gap in the coverage. After coloring the sample by insert size and pair orientation, I also saw a long column of green reads near the same location. Since the paired-end reads point away from each other, I believe this sample is likely translocated.
