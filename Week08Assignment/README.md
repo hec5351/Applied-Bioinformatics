@@ -2,6 +2,10 @@
 
 ### Select a few variants that fall in a coding sequence. If the VCF has none, choose a different sample.
 
+Pull metadata for my organism *Mycoplasma genitalium): 
+```bash
+esearch -db sra -query '"Mycoplasma genitalium"[Organism] AND "wgs"[Strategy] AND "illumina"[Platform] AND "paired"[Layout]' | efetch -format runinfo > runinfo.csv
+```
 
 ### Predict the effect of each variant either by eye or with a software tool.
 
