@@ -18,6 +18,13 @@ I annotated four SNPs from the jointly called multisample VCF, all in coding seq
 
 
 
+| Header 1 | Header 2 | Header 3 |
+| --- | --- | --- |
+| Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3 |
+| Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3 |
+
+
+
 ### Record the reference codon, the alternate codon, and the amino acid change. Use the genetic code for your organism.
 
 ## Questions
