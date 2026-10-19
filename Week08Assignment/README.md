@@ -18,7 +18,7 @@ I annotated four SNPs from the jointly called multisample VCF, all in coding seq
 
 
 
-| Header 1 | Header 2 | Header 3 |
+| Position | Gene | Locus Tag | Gene Product | Strand  
 | --- | --- | --- |
 | Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3 |
 | Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3 |
