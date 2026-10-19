@@ -8,7 +8,8 @@ esearch -db sra -query '"Mycoplasma genitalium"[Organism] AND "wgs"[Strategy] AN
 ```
 
 ### Predict the effect of each variant either by eye or with a software tool.
-I annotated four SNPs from the jointly called multisample VCF, all in coding sequences. Positions are on NZ_CP159789.1.
+I annotated four SNPs from the jointly called multisample VCF, all in coding sequences. Positions are on NZ_CP159789.1.  
+
 
 | Postition | Gene | Locus Tag | Gene Product | Strand
 | --- | --- | --- |
