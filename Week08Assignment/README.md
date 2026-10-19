@@ -9,8 +9,26 @@ esearch -db sra -query '"Mycoplasma genitalium"[Organism] AND "wgs"[Strategy] AN
 
 ### Predict the effect of each variant either by eye or with a software tool.
 
+I asked Claude to write me a script to predict the effects of each SNP in the multisample VCF. For each varient, it reads the sequence from the reference FASTA and works out the codon position of the change within it. Then, it checks the VCF reference base with the genome, builds an alternatice codon, and translates both with the genetic code of my organism (Mycoplasma genitalium). I will attach the script (codon_effect.py).
+
+
+| Position | Gene | Effect |
+| --- | --- | --- |
+| 1262 | dnaN | missense |
+| 1611 | dnaN | missense |
+| 4728 | gyrB | synonymous |
+| 5710 | gyrA | missense |
+
 
 ### Record the reference codon, the alternate codon, and the amino acid change. Use the genetic code for your organism.
+
+| Postition | Gene | Position in Codon | Reference Codon | Alternate codon | Amino acid change |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1262 | dnaN | 193 (1st base) | GAA | AAA | Glu to Lys |
+| 1611 | dnaN | 309 (2nd base) | ATT | ACT | Ile to Thr |
+| 4728 | gyrB | 628 (3rd base) | GGT | GGC | Gly to Gly |
+| 5710 | gyrA | 300 (2nd base) | GCT | GAT | Ala to Asp |
+
 
 ## Questions
 
