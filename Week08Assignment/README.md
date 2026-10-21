@@ -60,3 +60,7 @@ I annotated four SNPs from the jointly called multisample VCF. Positions are on 
 | 4728 | gyrB | 628 (3rd base) | GGT | GGC | Gly to Gly |
 | 5710 | gyrA | 300 (2nd base) | GCT | GAT | Ala to Asp |
 
+To run Makefile:
+```bash
+make all
+```
