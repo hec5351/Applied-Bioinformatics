@@ -33,4 +33,7 @@ make report  # covered bases, depth at covered positions, variants per
 ## Visualize the results in IGV and summarize a few findings that seem relevant.
 <img width="602" height="376" alt="Screenshot 2026-10-25 at 8 55 21 PM" src="https://github.com/user-attachments/assets/11f3de87-e49a-42c8-a35e-1b11510207fb" />
 <img width="604" height="359" alt="Screenshot 2026-10-25 at 8 55 11 PM" src="https://github.com/user-attachments/assets/c0b432bb-19b9-4483-ac63-d42a73e25d72" />
+  
+  
+
 In the merged VCF (60 sites, 10 samples), reads are confined to a small set of amplified regions: gyrB, gyrA, parE/parC, several ribosomal protein genes (rplD, rplV, rpsS, rpsC), and a long gene near 173.7 to 174.4 kb. Coverage is uneven, with some amplicons far deeper than others, and sample MG10_01 has little or no data at some amplicons. Variants are concentrated in a few spots, including a cluster of adjacent SNPs near 191.2 to 191.8 kb that is carried by several samples together, which suggests one divergent haplotype rather than independent mutations. Some variants are shared by samples from different body sites and years (for example the site near 193.6 kb in MG101, MG16, and MG83), so with ten samples I do not claim an association with body site or year.
