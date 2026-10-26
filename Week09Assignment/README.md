@@ -29,3 +29,5 @@ make report  # covered bases, depth at covered positions, variants per
 
 
 ## Visualize the results in IGV or and summarize a few findings that seem relevant.
+<img width="602" height="376" alt="Screenshot 2026-10-25 at 8 55 21 PM" src="https://github.com/user-attachments/assets/11f3de87-e49a-42c8-a35e-1b11510207fb" />
+<img width="604" height="359" alt="Screenshot 2026-10-25 at 8 55 11 PM" src="https://github.com/user-attachments/assets/c0b432bb-19b9-4483-ac63-d42a73e25d72" />
