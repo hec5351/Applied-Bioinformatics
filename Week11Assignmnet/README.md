@@ -25,7 +25,7 @@ CBX6. The coverage starts around 39 Mb in all six samples.
 
 Considering where the coverage starts, transcript 1 must be expressed.
 
-You can’t rule out transcript 2. Every part of it overlaps transcript 1, so any reads on it could come from either one.
+Every part of transcript 2 overlaps transcript 1, so any reads on it could come from either one.
 
 Transcript 3 is unlikely but can’t be fully excluded. Most of its region is intron in the other two transcripts, and coverage there is low. That suggests transcript 3 is absent or only weakly expressed.  
 
