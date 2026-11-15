@@ -32,3 +32,5 @@ I will be using this repository for my BMMB852 (Applied Bioinformatics) course d
 [Week 10](https://github.com/hec5351/Applied-Bioinformatics/tree/main/Week10Assignment)
 
 [Week 11](https://github.com/hec5351/Applied-Bioinformatics/tree/main/Week11Assignmnet)
+
+[Week 12](https://github.com/hec5351/Applied-Bioinformatics/tree/main/Week12Assignment)
